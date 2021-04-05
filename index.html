@@ -1,0 +1,123 @@
+
+<html lang="en">    
+    <meta charset="UTF-8"/>
+    <head>
+        <title>Pinkulu</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    </head>
+
+    <body>
+        
+        <div class="main">
+            <nav>
+                <div class="logo">  
+                    <img src="images/logo.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mods.html">Mods</a></li>
+                        <li><a href="https://discord.gg/Fykpshg">Discord</a></li>
+                        <li><a href="https://github.com/pinkulu">Github</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/body.png" class="mcbody">
+            <div id="circle">
+                
+                <div class="feature info">
+                    <div>
+                        <h1>
+                            Information
+                        </h1>
+                        <p>I like to make stuff, even if its bad.</p>
+                        <p>I have experiance in java and python</p>
+                        <p>With Java I have made mods for Minecraft Forge</p>
+                        <p>With Python i have made discord bots, and apis</p>
+                        <p><b><a href="https://api.pinkulu.com/HeightLimitMod/BedWars" style="color: white">Public API</a></b></p>       
+
+                    </div>
+                </div>
+
+                <div class="feature more">
+                    <div>
+                        <h1>
+                            More
+                        </h1>
+                        <p>If you have any more question</p>
+                        <p>please message me on Discord</p>
+                    </div>
+                </div>
+
+                <div class="feature mods">           
+                    <div>
+                        <h1>
+                            Mods
+                        </h1>
+                        <p>You can see all my work</p>
+                        <p>on my Github or in the <a href="mods.html" style="color: white">Mods</a> section</p>
+                    </div>
+                </div>
+
+                <div class="feature discord">
+                    <div>
+                        <h1>
+                            Discord
+                        </h1>
+                        <p>If you want to contact me</p>
+                        <p>Messge me on Discord pinkulu#6260</p>
+                        <p>Or Join my server <a href="https://discord.gg/Fykpshg" style="color: white">Here</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>information</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+        </div>
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function()
+            {
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+            downBtn.onclick = function()
+            {
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+            window.addEventListener('wheel', function(event)
+            {
+             if (event.deltaY < 0)
+             {
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+             }
+             else if (event.deltaY > 0)
+             {
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+             }
+            });
+        </script>
+    </body>
+</html>
