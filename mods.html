@@ -3,13 +3,13 @@
     <meta charset="UTF-8"/>
     <head>
         <title>Pinkulu</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="modsStyle.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     </head>
 
     <body>
-        <div class="main">
+        <div class="main" id="main">
             <nav>
                 <div class="logo">  
                     <img src="images/logo.png">
@@ -54,5 +54,11 @@
                       </div>
               </div>
         </div>
+        <script>
+        if (screen.width <= 699) {
+            document.getElementById("main").style.height=`120vh`;
+
+        }
+        </script>
     </body>
 </html>

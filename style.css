@@ -61,17 +61,16 @@ nav{
 }
 .feature{
     position: absolute;
-    color: #fff;
 }
 .feature div{
    margin-left: 30px; 
 }
 .feature div p{
-    margin-top: 8px; 
+    margin-top: 15px; 
  }
 .info{
-    top: 450px;
-    right: 50px;
+    top: 400px;
+    right: 20px;
     text-align: center;
 }
 .mods{
@@ -132,68 +131,4 @@ nav{
     position: absolute;
     left: 0;
     top: 0;
-}
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Float four columns side by side */
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 50px;
-  }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 5px 18px 0 rgba(111, 46, 155, 0.61); /* this adds the "card" effect */
-    padding: 16px;
-    text-align: center;
-    background-color: #d4c0da;
-  }
-  /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  a.button1{
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s;
-    }
-a.button1:hover{
-    color:#000000;
-    background-color:#FFFFFF;
-    }
-@media all and (max-width:30em){
-a.button1{
-    display:block;
-    margin:0.4em auto;
-    }
 }

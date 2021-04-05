@@ -1,0 +1,243 @@
+<html lang="en">    
+    <meta charset="UTF-8"/>
+    <head>
+        <title>Pinkulu</title>
+        <link rel="stylesheet" href="mobileStyle.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <div class="main" id="main">
+            <nav>
+                <div class="logo">  
+                    <img src="images/logo.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mods.html">Mods</a></li>
+                        <li><a href="https://discord.gg/Fykpshg">Discord</a></li>
+                        <li><a href="https://github.com/pinkulu">Github</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="Information">
+                <div class="feature info" id="info">
+                    <div>
+                        <h1>
+                            Information
+                        </h1>
+                        <p>I like to make stuff, even if its bad.</p>
+                        <p>I have experiance in java and python</p>
+                        <p>With Java I have made mods for Minecraft Forge</p>
+                        <p>With Python i have made discord bots, and apis</p>
+                        <p><b><a href="https://api.pinkulu.com/HeightLimitMod/BedWars" style="color: currentColor">Public API</a></b></p>       
+
+                    </div>
+                </div>
+                <div class="feature mods"id="mods">           
+                    <div>
+                        <h1>
+                            Mods
+                        </h1>
+                        <p>You can see all my work</p>
+                        <p>on my Github or in the <a href="mods.html" style="color: currentColor">Mods</a> section</p>
+                    </div>
+                </div>
+
+                <div class="feature discord"id="discord">
+                    <div>
+                        <h1>
+                            Discord
+                        </h1>
+                        <p>If you want to contact me</p>
+                        <p>Messge me on Discord pinkulu#6260</p>
+                        <p>Or Join my server <a href="https://discord.gg/Fykpshg" style="color: currentColor">Here</a></p>
+                    </div>
+                </div>
+                
+                <div class="feature more"id="more">
+                    <div>
+                        <h1>
+                            More
+                        </h1>
+                        <p>If you have any more question</p>
+                        <p>please message me on Discord</p>
+                    </div>
+                <div class="feature button">
+                    <button id="coolButton">Click Me!</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script>
+        if (screen.width >= 699) {
+            document.location = "index.html";
+        }
+        const coolButton = document.getElementById('coolButton');
+
+        const colors = ["AliceBlue",
+  "AntiqueWhite",
+  "Aqua",
+  "Aquamarine",
+  "Azure",
+  "Beige",
+  "Bisque",
+  "Black",
+  "BlanchedAlmond",
+  "Blue",
+  "BlueViolet",
+  "Brown",
+  "BurlyWood",
+  "CadetBlue",
+  "Chartreuse",
+  "Chocolate",
+  "Coral",
+  "CornflowerBlue",
+  "Cornsilk",
+  "Crimson",
+  "Cyan",
+  "DarkBlue",
+  "DarkCyan",
+  "DarkGoldenRod",
+  "DarkGray",
+  "DarkGrey",
+  "DarkGreen",
+  "DarkKhaki",
+  "DarkMagenta",
+  "DarkOliveGreen",
+  "DarkOrange",
+  "DarkOrchid",
+  "DarkRed",
+  "DarkSalmon",
+  "DarkSeaGreen",
+  "DarkSlateBlue",
+  "DarkSlateGray",
+  "DarkSlateGrey",
+  "DarkTurquoise",
+  "DarkViolet",
+  "DeepPink",
+  "DeepSkyBlue",
+  "DimGray",
+  "DimGrey",
+  "DodgerBlue",
+  "FireBrick",
+  "FloralWhite",
+  "ForestGreen",
+  "Fuchsia",
+  "Gainsboro",
+  "GhostWhite",
+  "Gold",
+  "GoldenRod",
+  "Gray",
+  "Grey",
+  "Green",
+  "GreenYellow",
+  "HoneyDew",
+  "HotPink",
+  "IndianRed",
+  "Indigo",
+  "Ivory",
+  "Khaki",
+  "Lavender",
+  "LavenderBlush",
+  "LawnGreen",
+  "LemonChiffon",
+  "LightBlue",
+  "LightCoral",
+  "LightCyan",
+  "LightGoldenRodYellow",
+  "LightGray",
+  "LightGrey",
+  "LightGreen",
+  "LightPink",
+  "LightSalmon",
+  "LightSeaGreen",
+  "LightSkyBlue",
+  "LightSlateGray",
+  "LightSlateGrey",
+  "LightSteelBlue",
+  "LightYellow",
+  "Lime",
+  "LimeGreen",
+  "Linen",
+  "Magenta",
+  "Maroon",
+  "MediumAquaMarine",
+  "MediumBlue",
+  "MediumOrchid",
+  "MediumPurple",
+  "MediumSeaGreen",
+  "MediumSlateBlue",
+  "MediumSpringGreen",
+  "MediumTurquoise",
+  "MediumVioletRed",
+  "MidnightBlue",
+  "MintCream",
+  "MistyRose",
+  "Moccasin",
+  "NavajoWhite",
+  "Navy",
+  "OldLace",
+  "Olive",
+  "OliveDrab",
+  "Orange",
+  "OrangeRed",
+  "Orchid",
+  "PaleGoldenRod",
+  "PaleGreen",
+  "PaleTurquoise",
+  "PaleVioletRed",
+  "PapayaWhip",
+  "PeachPuff",
+  "Peru",
+  "Pink",
+  "Plum",
+  "PowderBlue",
+  "Purple",
+  "RebeccaPurple",
+  "Red",
+  "RosyBrown",
+  "RoyalBlue",
+  "SaddleBrown",
+  "Salmon",
+  "SandyBrown",
+  "SeaGreen",
+  "SeaShell",
+  "Sienna",
+  "Silver",
+  "SkyBlue",
+  "SlateBlue",
+  "SlateGray",
+  "SlateGrey",
+  "Snow",
+  "SpringGreen",
+  "SteelBlue",
+  "Tan",
+  "Teal",
+  "Thistle",
+  "Tomato",
+  "Turquoise",
+  "Violet",
+  "Wheat",
+  "White",
+  "WhiteSmoke",
+  "Yellow",
+  "YellowGreen"]
+
+        const randoColor = () => colors[Math.floor(Math.random() * colors.length)];
+        coolButton.onclick = (e) => {
+            document.getElementById("main").style.background=`linear-gradient(to right, ${randoColor()}, ${randoColor()})`;
+
+            document.getElementById("info").style.color=`${randoColor()}`;
+            document.getElementById("mods").style.color=`${randoColor()}`;
+            document.getElementById("discord").style.color=`${randoColor()}`;
+            document.getElementById("more").style.color=`${randoColor()}`;
+
+        }
+
+        </script>
+    </body>
+</html>
