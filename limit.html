@@ -1,0 +1,213 @@
+
+<html lang="en">    
+    <meta charset="UTF-8"/>
+    <head>
+        <title>Pinkulu</title>
+        <link rel="stylesheet" href="limitStyle.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">  
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="https://pinkulu.com">Home</a></li>
+                    <li><a href="mods.html">Mods</a></li>                        
+                    <li><a href="limit.html">HeightLimitWeb</a></li>
+                    <li><a href="https://discord.gg/Fykpshg">Discord</a></li>
+                    <li><a href="https://github.com/pinkulu">Github</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">Mode</button>
+            <div class="dropdown-content">
+              <a  id="all">ALL</a>
+              <a id="solo">solo/doubles</a>
+              <a id="fours">3v3v3v3/4v4v4v4</a>
+              <a id="random">Random Map</a>
+
+            </div>
+          </div>
+            <div class='cards' id="cards">
+                
+            </div>
+            <p>All the stats taken from https://api.pinkulu.com/HeightLimitMod/BedWars</p>
+    </script>
+    <script type="text/javascript">
+            function clickHandlerAll(){ // declare a function that updates the state
+                document.getElementById('cards').innerHTML = "";
+                fetch('https://api.pinkulu.com/HeightLimitMod/BedWars')
+            .then(response => response.json())
+            .then(data => {
+                var myStringArray = data;
+                var arrayLength = myStringArray.length;
+                const div = document.createElement('div')
+                for (var i = 0; i < arrayLength; i++) {
+                    document.getElementById('cards').innerHTML += `
+                                     <figure class="card card--fairy">
+                                       <figcaption class="card__caption">
+                                         <h1 class="card__name">${(myStringArray[i].MapName.charAt(0).toUpperCase()
+                                         + myStringArray[i].MapName.slice(1)).replace("_", " ")}</h1>   
+                                         <table class="card__stats">
+                                           <tbody><tr>
+                                             <th>Limit</th>
+                                             <td>${myStringArray[i].Limit}</td>
+                                           </tr>
+                                           <tr>
+                                             <th>Mode</th>
+                                             <td>${myStringArray[i].Mode}</td>
+                                           </tr>
+                                         </tbody>
+                                        </table>
+                                `
+                        }
+                    })
+                return
+            }
+
+            var element = document.getElementById('all');
+            element.addEventListener('click', clickHandlerAll);
+
+            function clickHandlerSolo(){ // declare a function that updates the state
+                document.getElementById('cards').innerHTML = "";
+                fetch('https://api.pinkulu.com/HeightLimitMod/BedWars')
+            .then(response => response.json())
+            .then(data => {
+                var myStringArray = data;
+                var arrayLength = myStringArray.length;
+                const div = document.createElement('div')
+                for (var i = 0; i < arrayLength; i++) {
+                    if(myStringArray[i].Mode == "solo/doubles"){
+                    document.getElementById('cards').innerHTML += `
+                                     <figure class="card card--fairy">
+                                       <figcaption class="card__caption">
+                                         <h1 class="card__name">${(myStringArray[i].MapName.charAt(0).toUpperCase()
+                                         + myStringArray[i].MapName.slice(1)).replace("_", " ")}</h1>   
+                                         <table class="card__stats">
+                                           <tbody><tr>
+                                             <th>Limit</th>
+                                             <td>${myStringArray[i].Limit}</td>
+                                           </tr>
+                                           <tr>
+                                             <th>Mode</th>
+                                             <td>${myStringArray[i].Mode}</td>
+                                           </tr>
+                                         </tbody>
+                                        </table>
+                                `
+                        }
+                    }
+                    })
+                return
+            }
+            var element1 = document.getElementById('solo');
+            element1.addEventListener('click', clickHandlerSolo);
+
+            function clickHandlerFours(){ // declare a function that updates the state
+                document.getElementById("cards").innerHTML = "";
+                fetch('https://api.pinkulu.com/HeightLimitMod/BedWars')
+            .then(response => response.json())
+            .then(data => {
+                var myStringArray = data;
+                var arrayLength = myStringArray.length;
+                const div = document.createElement('div')
+                for (var i = 0; i < arrayLength; i++) {
+                    if(myStringArray[i].Mode == "3v3v3v3/4v4v4v4"){
+                    document.getElementById('cards').innerHTML += `
+                                     <figure class="card card--fairy">
+                                       <figcaption class="card__caption">
+                                         <h1 class="card__name">${(myStringArray[i].MapName.charAt(0).toUpperCase()
+                                         + myStringArray[i].MapName.slice(1)).replace("_", " ")}</h1>   
+                                         <table class="card__stats">
+                                           <tbody><tr>
+                                             <th>Limit</th>
+                                             <td>${myStringArray[i].Limit}</td>
+                                           </tr>
+                                           <tr>
+                                             <th>Mode</th>
+                                             <td>${myStringArray[i].Mode}</td>
+                                           </tr>
+                                         </tbody>
+                                        </table>
+                                `
+                        }
+                    }
+                    })
+                return
+            }
+
+            var element4 = document.getElementById('fours');
+            element4.addEventListener('click', clickHandlerFours); 
+
+
+
+            function clickHandlerRandom(){ // declare a function that updates the state
+                document.getElementById("cards").innerHTML = "";
+                fetch('https://api.pinkulu.com/HeightLimitMod/BedWars')
+            .then(response => response.json())
+            .then(data => {
+                var myStringArray = data;
+                var arrayLength = myStringArray.length;
+                const randIndex = Math.floor(Math.random() * arrayLength)
+                var i = randIndex
+                const div = document.createElement('div')
+                    document.getElementById('cards').innerHTML += `
+                                     <figure class="card card--fairy">
+                                       <figcaption class="card__caption">
+                                         <h1 class="card__name">${(myStringArray[i].MapName.charAt(0).toUpperCase()
+                                         + myStringArray[i].MapName.slice(1)).replace("_", " ")}</h1>   
+                                         <table class="card__stats">
+                                           <tbody><tr>
+                                             <th>Limit</th>
+                                             <td>${myStringArray[i].Limit}</td>
+                                           </tr>
+                                           <tr>
+                                             <th>Mode</th>
+                                             <td>${myStringArray[i].Mode}</td>
+                                           </tr>
+                                         </tbody>
+                                        </table>
+                                `
+                    })
+                return
+            }
+
+            var elementR = document.getElementById('random');
+            elementR.addEventListener('click', clickHandlerRandom); 
+
+
+
+            fetch('https://api.pinkulu.com/HeightLimitMod/BedWars')
+            .then(response => response.json())
+            .then(data => {
+                var myStringArray = data;
+                var arrayLength = myStringArray.length;
+                const div = document.createElement('div')
+                for (var i = 0; i < arrayLength; i++) {
+                document.getElementById('cards').innerHTML += `
+                    <figure class="card card--fairy">
+                      <figcaption class="card__caption">
+                        <h1 class="card__name">${(myStringArray[i].MapName.charAt(0).toUpperCase()
+                        + myStringArray[i].MapName.slice(1)).replace("_", " ")}</h1>   
+                        <table class="card__stats">
+                          <tbody><tr>
+                            <th>Limit</th>
+                            <td>${myStringArray[i].Limit}</td>
+                          </tr>
+                          <tr>
+                            <th>Mode</th>
+                            <td>${myStringArray[i].Mode}</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    `
+                    }                    
+            });
+    </script>
+    </body>
+</html>

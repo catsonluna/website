@@ -15,8 +15,9 @@
                 </div>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="mods.html">Mods</a></li>
+                        <li><a href="https://pinkulu.com">Home</a></li>
+                        <li><a href="mods.html">Mods</a></li>                        
+                        <li><a href="limit.html">HeightLimitWeb</a></li>
                         <li><a href="https://discord.gg/Fykpshg">Discord</a></li>
                         <li><a href="https://github.com/pinkulu">Github</a></li>
                     </ul>
@@ -65,16 +66,18 @@
                         <p>If you have any more question</p>
                         <p>please message me on Discord</p>
                     </div>
-                <div class="feature button">
+                </div>
+				<div class="feature button">
                     <button id="coolButton">Click Me!</button>
-                </div>
+					</div>
                 </div>
             </div>
-            </div>
-        </div>
         <script>
-        if (screen.width >= 699) {
+        if (screen.width >= 1175) {
             document.location = "index.html";
+        }
+		if (screen.height <= 690) {
+            document.getElementById("main").style.height=`150vh`;
         }
         const coolButton = document.getElementById('coolButton');
 

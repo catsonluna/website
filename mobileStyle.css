@@ -1,4 +1,5 @@
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -10,7 +11,7 @@
     overflow: hidden;
     background: linear-gradient(to left, #ffc4ff, #77b9d1);
 }
-nav{
+  nav{
     width: 90%;
     position: sticky;
     margin: 2vh auto;
@@ -38,32 +39,87 @@ nav{
     color: #fff;
     text-decoration: none;
 }
-.information{
-    text-align: center;
-    margin: 10vh auto;
-
-}
 .feature{
-    position: center;
-    margin: 5vh;
+  position: center;
+  margin: 5vh;
 }
 .info{
-    top: 15%;
-    text-align: center;
-    color: white;
+  top: 15%;
+  text-align: center;
+  color: white;
 }
 .mods{
-    top: 35%;
-    text-align: center;
-    color: white;
+  top: 35%;
+  text-align: center;
+  color: white;
 }
 .discord{
-    bottom: 40%;
-    text-align: center;
-    color: white;
+  bottom: 40%;
+  text-align: center;
+  color: white;
 }
 .more{
-    bottom:20%;
+  bottom:20%;
+  text-align: center;
+  color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 50px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 5px 18px 0 rgba(111, 46, 155, 0.61); /* this adds the "card" effect */
+    padding: 16px;
     text-align: center;
-    color: white;
+    background-color: #d4c0da;
+  }
+  /* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  a.button1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    }
+a.button1:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+@media all and (max-width:30em){
+a.button1{
+    display:block;
+    margin:0.4em auto;
+    }
 }
