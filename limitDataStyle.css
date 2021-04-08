@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700');
+body {
+	 font-family: "Open Sans", Helvetica, sans-serif;
+	 text-align: center;
+	 margin: 20px;
+     background: linear-gradient(to left, #ffc4ff, #77b9d1);
+}
+nav{
+    width: 100%;
+    position: sticky;
+    margin: 2% auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    flex-basis: 10%;
+}
+.logo img{
+    width: 10vh;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 1 2vh;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+ img {
+	 max-height: 150px;
+	 margin: auto;
+	 display: inline-block;
+}
+.box {
+    border: 5px solid plum;
+    box-sizing: border-box;
+}
+.umb-box {
+    border: 5px dashed goldenrod;
+    box-sizing: border-box;
+}
+.insights .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+.insights .graph {
+    position: relative;
+    min-width: 0;
+}
+.insights .numbers .umb-box-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 10px;
+}
+.insights .numbers .umb-box-content div {
+    background: rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 10px;
+}
+.insights .numbers .umb-box-content span {
+    font-size: 18px;
+}
+.insights .numbers .umb-box-content span.positive {
+    color: #1fb572;
+}
+.insights .numbers .umb-box-content span.negative {
+    color: #d42054;
+}
+.insights .numbers .umb-box-content h1 {
+    font-weight: bold;
+    margin: 0;
+}
+@media only screen and (max-width: 1600px) {
+    .insights .grid-container {
+        background: rgba(255,0,0,0.1);
+        grid-template-columns: 1fr;
+   }
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: pink;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: gainsboro;}
