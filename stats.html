@@ -221,12 +221,14 @@
 
 
                 let combinedToday = {...obj3, ...obj4};
-                delete combined.TotalCalls;
+                delete combinedToday.TotalCalls;
 
-                for (let key of Object.keys(combined)) {
+                for (let key of Object.keys(combinedToday)) {
                   labelsToday.push(key);
-                  datasetToday.push(combined[key]);
+                  datasetToday.push(combinedToday[key]);
                 }
+                console.log(labelsToday)
+                console.log(datasetToday)
 
                 var ctx = document.getElementById('mapsToday').getContext('2d');
                 var myChart = new Chart(ctx, {
