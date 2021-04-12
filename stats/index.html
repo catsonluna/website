@@ -16,19 +16,19 @@
    <body>
       <div class="main" id="main">
       <nav>
-         <div class="logo">  
-            <img src="images/logo.png">
+         <div class="logo">
+            <img src="../images/logo.png">
          </div>
          <div class="nav-links">
             <ul>
                <li><a href="https://pinkulu.com">Home</a></li>
-               <li><a href="mods.html">Mods</a></li>
+               <li><a href="/mods">Mods</a></li>
                <li>
                   <div class="dropdown">
                      <button class="dropbtn">HeightLimitWeb</button>
                      <div class="dropdown-content">
-                        <a href="maps.html">Maps</a>
-                        <a href="stats.html">Statistics</a>
+                        <a href="/maps">Maps</a>
+                        <a href="/stats">Statistics</a>
                      </div>
                   </div>
                </li>
@@ -93,7 +93,6 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  draw: function(){
-                     this.scale.endPoint = 200;
                      Chart.types.Bar.prototype.draw.apply(this, arguments);  
                  },
                  data: {
@@ -199,7 +198,6 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  draw: function(){
-                     this.scale.endPoint = 200;
                      Chart.types.Bar.prototype.draw.apply(this, arguments);  
                  },
                  data: {
